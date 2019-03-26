@@ -28,7 +28,14 @@
 
 <script src="../build/ckeditor.js"></script>
 <script>
-	ClassicEditor.create( document.querySelector( '#editor' ) )
+	ClassicEditor.create( document.querySelector( '#editor' ), {
+		wildcards: [
+			{
+				label: 'Numero documento',
+				wildcard: '{{number}}'
+			}
+		]
+	} )
 		.then( editor => {
 			window.editor = editor;
 		} )
