@@ -1,1 +1,0 @@
-(function(d){d['zh-cn']=Object.assign(d['zh-cn']||{},{a:"加粗",b:"块引用",c:"倾斜",d:"标题类型",e:"标题",f:"编号列表",g:"项目列表",h:"超链接",i:"段落",j:"标题 1",k:"标题 2",l:"标题 3",m:"Heading 4",n:"Heading 5",o:"Heading 6",p:"富文本编辑器， %0",q:"富文本编辑器",r:"保存",s:"取消",t:"链接网址",u:"取消超链接",v:"修改链接",w:"在新标签页中打开链接",x:"此链接没有设置网址",y:"撤销",z:"重做"})})(window.CKEDITOR_TRANSLATIONS||(window.CKEDITOR_TRANSLATIONS={}));
