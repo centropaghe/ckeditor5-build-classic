@@ -1,16 +1,14 @@
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
 import Command from '@ckeditor/ckeditor5-core/src/command';
 import imageIcon from '../svg/brackets.svg';
-import ButtonView from '@ckeditor/ckeditor5-ui/src/button/buttonview';
 import { createDropdown, addListToDropdown } from '@ckeditor/ckeditor5-ui/src/dropdown/utils';
 import Collection from '@ckeditor/ckeditor5-utils/src/collection';
 import Model from '@ckeditor/ckeditor5-ui/src/model';
 
-
 export default class WildCard extends Plugin {
-    init() {
+	init() {
 
-        const editor = this.editor;
+		const editor = this.editor;
 
         editor.commands.add('wildcardCommand', new TestCommand(editor));
 
@@ -20,7 +18,6 @@ export default class WildCard extends Plugin {
 
         editor.ui.componentFactory.add('wildcard', locale => {
 
-
             const dropdownView = createDropdown(locale);
 
             dropdownView.buttonView.set({
@@ -29,10 +26,8 @@ export default class WildCard extends Plugin {
                 tooltip: true
             });
 
-
             // create dropdown items collection
             const items = new Collection();
-
 
             // loop wildcards and set them
             for(const card of wildcards) {
@@ -50,15 +45,11 @@ export default class WildCard extends Plugin {
 
                 items.add(item);
 
-
             }
-
-
 
             dropdownView.on('execute', (args) => {
                 
                 const src = args.source;
-
                 
                 const content = `<strong>${src.wildcard}</strong>`
 
@@ -70,13 +61,9 @@ export default class WildCard extends Plugin {
 
             })
 
-
             addListToDropdown(dropdownView, items);
 
             return dropdownView;
-
-
-
 
         })
 
