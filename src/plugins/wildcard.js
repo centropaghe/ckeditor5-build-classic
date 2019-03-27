@@ -1,5 +1,4 @@
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
-import Command from '@ckeditor/ckeditor5-core/src/command';
 import imageIcon from '../svg/brackets.svg';
 import { createDropdown, addListToDropdown } from '@ckeditor/ckeditor5-ui/src/dropdown/utils';
 import Collection from '@ckeditor/ckeditor5-utils/src/collection';
@@ -9,8 +8,6 @@ export default class WildCard extends Plugin {
 	init() {
 
 		const editor = this.editor;
-
-        editor.commands.add('wildcardCommand', new TestCommand(editor));
 
         const wildcards = this.editor.config.get('wildcards');
 
