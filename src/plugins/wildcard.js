@@ -14,8 +14,6 @@ export default class WildCard extends Plugin {
 
         const wildcards = this.editor.config.get('wildcards');
 
-        console.log(wildcards);
-
         editor.ui.componentFactory.add('wildcard', locale => {
 
             const dropdownView = createDropdown(locale);
@@ -31,8 +29,6 @@ export default class WildCard extends Plugin {
 
             // loop wildcards and set them
             for(const card of wildcards) {
-
-                console.log(card);
 
                 const item = {
                     type: 'button',
@@ -51,9 +47,7 @@ export default class WildCard extends Plugin {
                 
                 const src = args.source;
                 
-                const content = `<strong>${src.wildcard}</strong>`
-
-                const viewFragment = editor.data.processor.toView(content);
+                const viewFragment = editor.data.processor.toView(src.wildcard);
 
                 const modelFragment = editor.data.toModel(viewFragment);
 
@@ -68,12 +62,4 @@ export default class WildCard extends Plugin {
         })
 
     }
-}
-
-class TestCommand extends Command {
-
-    execute(args) {
-        console.log('command executed dude');
-    }
-
 }
