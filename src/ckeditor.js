@@ -16,6 +16,7 @@ import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
+import Image from '@ckeditor/ckeditor5-image/src/image';
 import Wildcard from './plugins/wildcard';
 
 export default class ClassicEditor extends ClassicEditorBase {}
@@ -23,6 +24,7 @@ export default class ClassicEditor extends ClassicEditorBase {}
 // Plugins to include in the build.
 ClassicEditor.builtinPlugins = [
 	Essentials,
+	Image,
 	Autoformat,
 	Bold,
 	Italic,
